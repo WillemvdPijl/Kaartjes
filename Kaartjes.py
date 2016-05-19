@@ -31,12 +31,15 @@ def Main():
             BT = (BT + (p * 0.25))
             p = p * 0.75
 
+        if k < 20 and e == "nee":
+            BT = 0
+
         #Print resultaten
         print( )
         print("-Aantal tickets " + str(k))
         print("-Totale prijs: €" + str(p))
-        if k > 19:
-            print("-Korting: €" + str(BT))
+        #if k > 19:
+        print("-Korting: €" + str(BT))
 
     #bij foute invoer
     if t == "o" or t == "k" or t == "O" or t == "K":
