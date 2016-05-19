@@ -16,7 +16,7 @@ def Run():
         print("Saldo niet toereikend... Ga geld verdienen man, skeere tata!\n")
         Run()
     elif (Saldo - o) >= 0:
-        print("U heeft €" + str(o) + " opgenomen. Uw saldo bedraagt momenteel: €" + str(NSaldo) + ".")
+        print("-U heeft €" + str(o) + " opgenomen. Uw saldo bedraagt momenteel: €" + str(NSaldo) + ".")
         print("Bedankt voor het gebruiken van ING, nog een fijne dag\n")
         Run()
     elif (OpnameLimiet - o) < 0:
