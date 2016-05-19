@@ -2,7 +2,10 @@ def Main():
     t = input("Online of bij de kassa? Type 'o' voor online 'k' voor kassa: ")
 
     def Kassa():
-        e = input("Is er iemand met een abonnement? Type dan met kleine letters 'ja' of 'nee'")
+        e = input("Is er iemand met een abonnement? Type dan met kleine letters 'ja' of 'nee': ")
+        if e != "ja" and e != "nee":
+            print("\nType 'ja' of 'nee' in kleine letters a.u.b.")
+            Kassa()
         a = int(input("Hoeveel volwassenen? v.a. 13 jaar. (Gehandicapten begeleiders vallen hier niet onder): "))
         b = int(input("Hoeveel kidnderen? 3 t/m 12 jaar: "))
         c = int(input("Hoeveel baby's en/of peuters? 0 t/m 2 jaar: "))
@@ -11,9 +14,6 @@ def Main():
         #bij foute invoer
         if a < 0 or b < 0 or c < 0 or d < 0:
             print("Aantal kaartjes mag niet negatief zijn, probeer het opnieuw...\n")
-            Kassa()
-        if e != "ja" or e != "nee":
-            print("Type 'ja' of 'nee' in kleine letters a.u.b.")
             Kassa()
 
         BT = (a + b + d)  #Betaalde tickets
