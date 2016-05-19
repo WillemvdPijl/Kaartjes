@@ -25,8 +25,6 @@ def Main():
         print("Totale prijs: €" + str(p))
         if k > 19:
             print("Korting: €" + str(BT))
-    def AbonKassa():
-
 
     #bij foute invoer
     if t == "o" or t == "k" or t == "O" or t == "K":
