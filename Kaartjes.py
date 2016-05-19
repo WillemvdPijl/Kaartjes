@@ -30,6 +30,7 @@ def Main():
         if k > 19:
             print("Korting: €" + strBT)
 
+    #bij foute invoer
     if t == "o" or t == "k":
         Kassa()
     elif t != "o" and t != "k":
