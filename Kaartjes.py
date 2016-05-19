@@ -9,9 +9,9 @@ def Main():
 
         BT = (a + b + d)  # Betaalde tickets
         k = (a + b + c + d)  # Aantal tickets
-        if t == "o":
+        if t == "o" or t == "O":
             p = (a * 20 + b * 15.50 + d * 12)  # totale prijs
-        elif t == "k":
+        elif t == "k" or t == "K":
             p = (a * 22 + b * 17.50 + d * 12)  # totale prijs
 
         #groepskorting
@@ -19,19 +19,17 @@ def Main():
         if k > 19:
             p = p - korting
 
-        #int naar string
-        strk = str(k)
-        strp = str(p)
-        strBT = str(BT)
-
         #Print resultaten
-        print("Aantal tickets " + strk)
-        print("Totale prijs: €" + strp)
+        print( )
+        print("Aantal tickets " + str(k))
+        print("Totale prijs: €" + str(p))
         if k > 19:
-            print("Korting: €" + strBT)
+            print("Korting: €" + str(BT))
+    def AbonKassa():
+
 
     #bij foute invoer
-    if t == "o" or t == "k":
+    if t == "o" or t == "k" or t == "O" or t == "K":
         Kassa()
     elif t != "o" and t != "k":
         print("Type 'o' voor online kaarten of 'k' voor kassa kaarten a.u.b.")
