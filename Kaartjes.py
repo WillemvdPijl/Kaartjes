@@ -6,6 +6,9 @@ def Main():
         b = int(input("Hoeveel kidnderen? 3 t/m 12 jaar: "))
         c = int(input("Hoeveel baby's en/of peuters? 0 t/m 2 jaar: "))
         d = int(input("Hoeveel begeleiders (vanaf 13 jaar) van gehandicapte personen (vanaf 3 jaar): "))
+        if a < 0 or b < 0 or c < 0 or d < 0:
+            print("Aantal kaartjes mag niet negatief zijn, probeer het opnieuw...\n")
+            Main()
 
         BT = (a + b + d)  # Betaalde tickets
         k = (a + b + c + d)  # Aantal tickets
@@ -30,6 +33,6 @@ def Main():
     if t == "o" or t == "k" or t == "O" or t == "K":
         Kassa()
     elif t != "o" and t != "k":
-        print("Type 'o' voor online kaarten of 'k' voor kassa kaarten a.u.b.")
+        print("Type 'o' voor online kaarten of 'k' voor kassa kaarten a.u.b.\n")
         Main()
 Main()
